@@ -13,6 +13,8 @@ import {
     Award,
     ArrowRight,
     Gift,
+    Clock,
+    CreditCard,
 } from "lucide-react";
 
 function App() {
@@ -517,6 +519,44 @@ function App() {
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">
                         Garanta agora sua vaga!
                     </h2>
+                    
+                    {/* Pricing Card */}
+                    <div className="max-w-md mx-auto mb-8">
+                        <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20">
+                            {/* Urgency Banner */}
+                            <div className="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-full mb-6 flex items-center justify-center">
+                                <Clock className="w-4 h-4 mr-2" />
+                                <span className="text-sm font-semibold">PROMOÇÃO VÁLIDA POR APENAS 48 HORAS</span>
+                            </div>
+                            
+                            {/* Original Price */}
+                            <div className="mb-4">
+                                <div className="text-white text-opacity-70 text-lg">De:</div>
+                                <div className="text-white text-opacity-70 text-2xl line-through">R$ 997,00</div>
+                            </div>
+                            
+                            {/* Promotional Price */}
+                            <div className="mb-6">
+                                <div className="text-white text-lg">Por apenas:</div>
+                                <div className="text-4xl md:text-5xl font-bold text-white mb-2">R$ 497</div>
+                                <div className="text-white text-opacity-90 text-lg">à vista</div>
+                            </div>
+                            
+                            {/* Payment Options */}
+                            <div className="border-t border-white border-opacity-20 pt-6">
+                                <div className="flex items-center justify-center mb-3">
+                                    <CreditCard className="w-5 h-5 mr-2 text-white text-opacity-80" />
+                                    <span className="text-white text-opacity-90">ou em até 12x de:</span>
+                                </div>
+                                <div className="text-2xl font-bold text-white mb-1">R$ 49,70</div>
+                                <div className="text-white text-opacity-70 text-sm line-through mb-1">
+                                    (era 12x de R$ 99,70)
+                                </div>
+                                <div className="text-white text-opacity-90 text-sm">sem juros no cartão</div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="flex flex-wrap justify-center items-center gap-6 mb-8 text-blue-200">
                         <div className="flex items-center">
                             <Shield className="w-5 h-5 mr-2" />
