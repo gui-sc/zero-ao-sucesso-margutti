@@ -525,7 +525,7 @@ function App() {
                         <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20">
                             {/* Urgency Banner */}
                             <div className="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-full mb-6 flex items-center justify-center">
-                                <span className="text-sm font-semibold">PROMOÇÃO VÁLIDA POR APENAS 48 HORAS</span>
+                                <span className="text-xs sm:text-sm font-semibold">PROMOÇÃO VÁLIDA POR APENAS 48 HORAS</span>
                             </div>
                             
                             {/* Original Price */}
