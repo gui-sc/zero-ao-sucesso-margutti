@@ -13,21 +13,30 @@ import {
     Award,
     ArrowRight,
     Gift,
-    Clock,
     CreditCard,
 } from "lucide-react";
 
 function App() {
+    const scrollToSection = (sectionId: string) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({
+                behavior: "smooth", // Habilita o scroll suave
+                block: "start", // Alinha a seção no topo da tela
+            });
+        }
+    };
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-[#1D4ED8] via-[#1D4ED8] to-[#1D4ED8] text-white overflow-hidden">
                 {/* Background Image */}
-                <div 
+                <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
                     style={{
-                        backgroundImage: 'url("https://images.pexels.com/photos/305568/pexels-photo-305568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
-                        filter: 'blur(2px)'
+                        backgroundImage:
+                            'url("./consultorio.webp")',
+                        filter: "blur(2px)",
                     }}
                 ></div>
                 <div className="absolute inset-0 bg-black opacity-10"></div>
@@ -52,7 +61,10 @@ function App() {
                             própria clínica ou consolidar seu consultório, este
                             curso foi feito para você!
                         </p>
-                        <button className="bg-white text-[#1D4ED8] px-8 py-4 rounded-full text-md sm:text-lg font-semibold hover:from-orange-600 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-2xl">
+                        <button
+                            onClick={() => scrollToSection("investimento")}
+                            className="bg-white text-[#1D4ED8] px-8 py-4 rounded-full text-md sm:text-lg font-semibold hover:from-orange-600 hover:to-red-600 transform hover:scale-105 transition-all duration-300 shadow-2xl"
+                        >
                             GARANTIR MINHA VAGA AGORA
                             <ArrowRight className="inline-block ml-2 w-5 h-5" />
                         </button>
@@ -61,15 +73,9 @@ function App() {
             </section>
 
             {/* What You'll Learn Section */}
-            <section className="relative py-20 bg-gray-50 overflow-hidden">
+            <section className="relative py-20 bg-gradient-to-r from-blue-50 to-blue-100 overflow-hidden">
                 {/* Background Image */}
-                <div 
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-                    style={{
-                        backgroundImage: 'url("https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
-                        filter: 'blur(3px)'
-                    }}
-                ></div>
+
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Text Overlay Card */}
                     <div className="bg-white bg-opacity-90 backdrop-blur-sm rounded-3xl p-8 shadow-lg">
@@ -106,8 +112,8 @@ function App() {
                                     </h3>
                                 </div>
                                 <p className="text-gray-600">
-                                    Planilhas e tabelas editáveis para controle de
-                                    receitas e despesas, garantindo a saúde
+                                    Planilhas e tabelas editáveis para controle
+                                    de receitas e despesas, garantindo a saúde
                                     financeira do seu negócio.
                                 </p>
                             </div>
@@ -120,8 +126,9 @@ function App() {
                                     </h3>
                                 </div>
                                 <p className="text-gray-600">
-                                    Estratégias para atrair e fidelizar pacientes,
-                                    incluindo protocolos de captação local e online.
+                                    Estratégias para atrair e fidelizar
+                                    pacientes, incluindo protocolos de captação
+                                    local e online.
                                 </p>
                             </div>
 
@@ -147,8 +154,9 @@ function App() {
                                     </h3>
                                 </div>
                                 <p className="text-gray-600">
-                                    Estratégias comprovadas para apresentar planos
-                                    de tratamento e fechar mais orçamentos.
+                                    Estratégias comprovadas para apresentar
+                                    planos de tratamento e fechar mais
+                                    orçamentos.
                                 </p>
                             </div>
 
@@ -160,8 +168,9 @@ function App() {
                                     </h3>
                                 </div>
                                 <p className="text-gray-600">
-                                    Métodos eficazes para gerar indicações contínuas
-                                    e construir uma base sólida de pacientes fiéis.
+                                    Métodos eficazes para gerar indicações
+                                    contínuas e construir uma base sólida de
+                                    pacientes fiéis.
                                 </p>
                             </div>
                         </div>
@@ -172,16 +181,16 @@ function App() {
             {/* Materials Section */}
             <section className="relative py-20 bg-white overflow-hidden">
                 {/* Background Image */}
-                <div 
+                <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-8"
                     style={{
-                        backgroundImage: 'url("https://images.pexels.com/photos/4269693/pexels-photo-4269693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
-                        filter: 'blur(4px)'
+                        backgroundImage: 'url("./foto_tulio3.jpeg")',
+                        filter: "blur(2px)",
                     }}
                 ></div>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Text Overlay Card */}
-                    <div className="bg-white bg-opacity-95 backdrop-blur-sm rounded-3xl p-8 shadow-lg">
+                    <div className="bg-white bg-opacity-70 backdrop-blur-sm rounded-3xl p-8 shadow-lg">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                                 Materiais e ferramentas que você receberá!
@@ -200,10 +209,13 @@ function App() {
                                     </div>
                                     <div>
                                         <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                                            Tabela de Precificação e Hora Clínica
+                                            Tabela de Precificação e Hora
+                                            Clínica
                                         </h3>
                                         <p className="text-gray-600">
-                                            Ferramenta completa para calcular seus valores de atendimento e precificar serviços
+                                            Ferramenta completa para calcular
+                                            seus valores de atendimento e
+                                            precificar serviços
                                         </p>
                                     </div>
                                 </div>
@@ -217,7 +229,9 @@ function App() {
                                             Tabela de Geolocalização Estratégica
                                         </h3>
                                         <p className="text-gray-600">
-                                            Análise de quantidade de dentistas X população para escolher a melhor região para sua clínica
+                                            Análise de quantidade de dentistas X
+                                            população para escolher a melhor
+                                            região para sua clínica
                                         </p>
                                     </div>
                                 </div>
@@ -231,7 +245,10 @@ function App() {
                                             Tabelas de Valores Completas
                                         </h3>
                                         <p className="text-gray-600">
-                                            Equipamentos odontológicos, estoque de consumo, estrutura, reforma, instrumentais, mobílias e eletrônicos
+                                            Equipamentos odontológicos, estoque
+                                            de consumo, estrutura, reforma,
+                                            instrumentais, mobílias e
+                                            eletrônicos
                                         </p>
                                     </div>
                                 </div>
@@ -245,7 +262,9 @@ function App() {
                                             Lista Completa para Abertura de CNPJ
                                         </h3>
                                         <p className="text-gray-600">
-                                            Todos os documentos necessários para abrir sua empresa de forma legal e organizada
+                                            Todos os documentos necessários para
+                                            abrir sua empresa de forma legal e
+                                            organizada
                                         </p>
                                     </div>
                                 </div>
@@ -259,7 +278,9 @@ function App() {
                                             Modelos de Documentos Legais
                                         </h3>
                                         <p className="text-gray-600">
-                                            Alvará municipal, contrato social, certidões, plano de gerenciamento de resíduos e muito mais
+                                            Alvará municipal, contrato social,
+                                            certidões, plano de gerenciamento de
+                                            resíduos e muito mais
                                         </p>
                                     </div>
                                 </div>
@@ -273,7 +294,9 @@ function App() {
                                             Documentação Completa para CRO
                                         </h3>
                                         <p className="text-gray-600">
-                                            Documentos para inscrição pessoal e cadastro da empresa no Conselho Regional de Odontologia
+                                            Documentos para inscrição pessoal e
+                                            cadastro da empresa no Conselho
+                                            Regional de Odontologia
                                         </p>
                                     </div>
                                 </div>
@@ -289,7 +312,9 @@ function App() {
                                             Modelos para Vigilância Sanitária
                                         </h3>
                                         <p className="text-gray-600">
-                                            Documentos e modelos necessários para aprovação na vigilância sanitária
+                                            Documentos e modelos necessários
+                                            para aprovação na vigilância
+                                            sanitária
                                         </p>
                                     </div>
                                 </div>
@@ -303,7 +328,9 @@ function App() {
                                             Dados de Mercado por Especialidade
                                         </h3>
                                         <p className="text-gray-600">
-                                            Quantidade de especialistas no Brasil para análise de concorrência e oportunidades
+                                            Quantidade de especialistas no
+                                            Brasil para análise de concorrência
+                                            e oportunidades
                                         </p>
                                     </div>
                                 </div>
@@ -317,7 +344,9 @@ function App() {
                                             Lista Geral de Dentistas por Estado
                                         </h3>
                                         <p className="text-gray-600">
-                                            Dados completos da distribuição de profissionais em todo o território nacional
+                                            Dados completos da distribuição de
+                                            profissionais em todo o território
+                                            nacional
                                         </p>
                                     </div>
                                 </div>
@@ -331,7 +360,9 @@ function App() {
                                             eBook Completo com Acesso Imediato
                                         </h3>
                                         <p className="text-gray-600">
-                                            Material completo para consulta e referência constante durante todo o processo
+                                            Material completo para consulta e
+                                            referência constante durante todo o
+                                            processo
                                         </p>
                                     </div>
                                 </div>
@@ -345,7 +376,9 @@ function App() {
                                             Aulas em Vídeo com Passo a Passo
                                         </h3>
                                         <p className="text-gray-600">
-                                            Conteúdo visual e detalhado para facilitar o aprendizado e implementação
+                                            Conteúdo visual e detalhado para
+                                            facilitar o aprendizado e
+                                            implementação
                                         </p>
                                     </div>
                                 </div>
@@ -359,7 +392,9 @@ function App() {
                                             Checklists Práticos para Cada Fase
                                         </h3>
                                         <p className="text-gray-600">
-                                            Guias detalhados para não esquecer nenhum detalhe importante do processo
+                                            Guias detalhados para não esquecer
+                                            nenhum detalhe importante do
+                                            processo
                                         </p>
                                     </div>
                                 </div>
@@ -370,15 +405,7 @@ function App() {
             </section>
 
             {/* Target Audience Section */}
-            <section className="relative py-20 bg-gradient-to-r from-blue-50 to-blue-100 overflow-hidden">
-                {/* Background Image */}
-                <div 
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
-                    style={{
-                        backgroundImage: 'url("https://images.pexels.com/photos/3845623/pexels-photo-3845623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
-                        filter: 'blur(3px)'
-                    }}
-                ></div>
+            <section className="relative py-20 bg-white overflow-hidden">
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Text Overlay Card */}
                     <div className="bg-white bg-opacity-90 backdrop-blur-sm rounded-3xl p-8 shadow-lg">
@@ -387,8 +414,8 @@ function App() {
                                 Para quem é este curso?
                             </h2>
                             <p className="text-xl text-gray-600">
-                                Ideal para profissionais em diferentes momentos da
-                                carreira.
+                                Ideal para profissionais em diferentes momentos
+                                da carreira.
                             </p>
                         </div>
 
@@ -401,7 +428,8 @@ function App() {
                                     Dentistas Recém-formados
                                 </h3>
                                 <p className="text-gray-600">
-                                    Que querem dar os primeiros passos com segurança
+                                    Que querem dar os primeiros passos com
+                                    segurança
                                 </p>
                             </div>
 
@@ -425,7 +453,8 @@ function App() {
                                     Donos de Consultório
                                 </h3>
                                 <p className="text-gray-600">
-                                    Que buscam organização e crescimento sustentável
+                                    Que buscam organização e crescimento
+                                    sustentável
                                 </p>
                             </div>
 
@@ -437,8 +466,8 @@ function App() {
                                     Profissionais Ambiciosos
                                 </h3>
                                 <p className="text-gray-600">
-                                    Que desejam acelerar resultados e evitar erros
-                                    comuns
+                                    Que desejam acelerar resultados e evitar
+                                    erros comuns
                                 </p>
                             </div>
                         </div>
@@ -449,20 +478,20 @@ function App() {
             {/* Instructor Section */}
             <section className="relative py-20 bg-white overflow-hidden">
                 {/* Background Image */}
-                <div 
+                <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-8"
                     style={{
-                        backgroundImage: 'url("https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
-                        filter: 'blur(4px)'
+                        backgroundImage: 'url("./foto_tulio4.jpeg")',
+                        filter: "blur(4px)",
                     }}
                 ></div>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 bg-opacity-95 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-lg">
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 bg-opacity-70 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-lg">
                         <div className="text-center">
                             <div className="h-64 relative w-full flex items-center justify-center mb-4">
                                 <img
-                                    src={'./foto_tulio.jpg'}
-                                    alt={'Prof. Túlio Margutti'}
+                                    src={"./foto_tulio1.jpeg"}
+                                    alt={"Prof. Túlio Margutti"}
                                     className="object-contain rounded-3xl w-auto h-full"
                                 />
                             </div>
@@ -472,8 +501,11 @@ function App() {
                             <div className="max-w-5xl mx-auto">
                                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                                     Dentista com mais de{" "}
-                                    <strong>14 anos de atuação clínica e acadêmica</strong>, 
-                                    referência em Implantodontia e Reabilitação Oral.
+                                    <strong>
+                                        14 anos de atuação clínica e acadêmica
+                                    </strong>
+                                    , referência em Implantodontia e
+                                    Reabilitação Oral.
                                 </p>
                                 <div className="grid md:grid-cols-2 gap-3 text-left">
                                     <div className="space-y-4">
@@ -481,25 +513,41 @@ function App() {
                                             <div className="flex items-start">
                                                 <CheckCircle className="w-5 h-5 text-[#1D4ED8] mr-3 mt-1 flex-shrink-0" />
                                                 <span className="text-gray-700">
-                                                    <strong>Mestre em Prótese Dentária</strong> - PUC-RS
+                                                    <strong>
+                                                        Mestre em Prótese
+                                                        Dentária
+                                                    </strong>{" "}
+                                                    - PUC-RS
                                                 </span>
                                             </div>
                                             <div className="flex items-start">
                                                 <CheckCircle className="w-5 h-5 text-[#1D4ED8] mr-3 mt-1 flex-shrink-0" />
                                                 <span className="text-gray-700">
-                                                    <strong>Especialista em Prótese Dentária</strong> - UNINGÁ
+                                                    <strong>
+                                                        Especialista em Prótese
+                                                        Dentária
+                                                    </strong>{" "}
+                                                    - UNINGÁ
                                                 </span>
                                             </div>
                                             <div className="flex items-start">
                                                 <CheckCircle className="w-5 h-5 text-[#1D4ED8] mr-3 mt-1 flex-shrink-0" />
                                                 <span className="text-gray-700">
-                                                    <strong>Especialista em Odontologia Esportiva</strong> - Uni. Positivo
+                                                    <strong>
+                                                        Especialista em
+                                                        Odontologia Esportiva
+                                                    </strong>{" "}
+                                                    - Uni. Positivo
                                                 </span>
                                             </div>
                                             <div className="flex items-start">
                                                 <CheckCircle className="w-5 h-5 text-[#1D4ED8] mr-3 mt-1 flex-shrink-0" />
                                                 <span className="text-gray-700">
-                                                    <strong>Pós Graduado em Odontologia Estética</strong> - UNINGÁ
+                                                    <strong>
+                                                        Pós Graduado em
+                                                        Odontologia Estética
+                                                    </strong>{" "}
+                                                    - UNINGÁ
                                                 </span>
                                             </div>
                                         </div>
@@ -510,19 +558,28 @@ function App() {
                                             <div className="flex items-start">
                                                 <CheckCircle className="w-5 h-5 text-[#1D4ED8] mr-3 mt-1 flex-shrink-0" />
                                                 <span className="text-gray-700">
-                                                    <strong>Consultor Científico</strong> - Signo Vinces
+                                                    <strong>
+                                                        Consultor Científico
+                                                    </strong>{" "}
+                                                    - Signo Vinces
                                                 </span>
                                             </div>
                                             <div className="flex items-start">
                                                 <CheckCircle className="w-5 h-5 text-[#1D4ED8] mr-3 mt-1 flex-shrink-0" />
                                                 <span className="text-gray-700">
-                                                    <strong>Consultor Científico</strong> - FGM
+                                                    <strong>
+                                                        Consultor Científico
+                                                    </strong>{" "}
+                                                    - FGM
                                                 </span>
                                             </div>
                                             <div className="flex items-start">
                                                 <CheckCircle className="w-5 h-5 text-[#1D4ED8] mr-3 mt-1 flex-shrink-0" />
                                                 <span className="text-gray-700">
-                                                    <strong>Consultor Científico</strong> - Yller
+                                                    <strong>
+                                                        Consultor Científico
+                                                    </strong>{" "}
+                                                    - Yller
                                                 </span>
                                             </div>
                                         </div>
@@ -536,14 +593,6 @@ function App() {
 
             {/* Bonus Section */}
             <section className="relative py-20 bg-gradient-to-r from-blue-50 to-blue-100 text-[#1D4ED8] overflow-hidden">
-                {/* Background Image */}
-                <div 
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-                    style={{
-                        backgroundImage: 'url("https://images.pexels.com/photos/4269693/pexels-photo-4269693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
-                        filter: 'blur(3px)'
-                    }}
-                ></div>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     {/* Text Overlay Card */}
                     <div className="bg-white bg-opacity-90 backdrop-blur-sm rounded-3xl p-8 shadow-lg">
@@ -560,9 +609,10 @@ function App() {
                                     E-book Gratuito de Apoio
                                 </h3>
                             </div>
-                            <p className="text-lg text-[#1D4ED8] mb-6"> 
-                                Baixe gratuitamente um E-book completo de apoio e
-                                comece hoje mesmo a transformação da sua carreira!
+                            <p className="text-lg text-[#1D4ED8] mb-6">
+                                Baixe gratuitamente um E-book completo de apoio
+                                e comece hoje mesmo a transformação da sua
+                                carreira!
                             </p>
                             <button className="bg-[#1D4ED8] text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg">
                                 <Download className="inline w-6 h-6 mr-3" />
@@ -574,13 +624,17 @@ function App() {
             </section>
 
             {/* CTA Section */}
-            <section className="relative py-20 bg-[#1D4ED8] text-white overflow-hidden">
+            <section
+                id="investimento"
+                className="relative py-20 bg-[#1D4ED8] text-white overflow-hidden"
+            >
                 {/* Background Image */}
-                <div 
+                <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
                     style={{
-                        backgroundImage: 'url("https://images.pexels.com/photos/305568/pexels-photo-305568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
-                        filter: 'blur(2px)'
+                        backgroundImage:
+                            'url("./consultorio.webp")',
+                        filter: "blur(2px)",
                     }}
                 ></div>
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -589,39 +643,57 @@ function App() {
                         <h2 className="text-3xl md:text-4xl font-bold mb-6">
                             Garanta agora sua vaga!
                         </h2>
-                        
+
                         {/* Pricing Card */}
                         <div className="max-w-md mx-auto mb-8">
                             <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-8 border border-white border-opacity-20">
                                 {/* Urgency Banner */}
                                 <div className="bg-gradient-to-r from-red-500 to-red-600 text-white px-4 py-2 rounded-full mb-6 flex items-center justify-center">
-                                    <span className="text-xs sm:text-sm font-semibold">PROMOÇÃO VÁLIDA POR APENAS 48 HORAS</span>
+                                    <span className="text-xs sm:text-sm font-semibold">
+                                        PROMOÇÃO VÁLIDA POR APENAS 48 HORAS
+                                    </span>
                                 </div>
-                                
+
                                 {/* Original Price */}
                                 <div className="mb-4">
-                                    <div className="text-white text-opacity-70 text-lg">De:</div>
-                                    <div className="text-white text-opacity-70 text-2xl line-through">R$ 997,00</div>
+                                    <div className="text-white text-opacity-70 text-lg">
+                                        De:
+                                    </div>
+                                    <div className="text-white text-opacity-70 text-2xl line-through">
+                                        R$ 997,00
+                                    </div>
                                 </div>
-                                
+
                                 {/* Promotional Price */}
                                 <div className="mb-6">
-                                    <div className="text-white text-lg">Por apenas:</div>
-                                    <div className="text-4xl md:text-5xl font-bold text-white mb-2">R$ 497</div>
-                                    <div className="text-white text-opacity-90 text-lg">à vista</div>
+                                    <div className="text-white text-lg">
+                                        Por apenas:
+                                    </div>
+                                    <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+                                        R$ 497
+                                    </div>
+                                    <div className="text-white text-opacity-90 text-lg">
+                                        à vista
+                                    </div>
                                 </div>
-                                
+
                                 {/* Payment Options */}
                                 <div className="border-t border-white border-opacity-20 pt-6">
                                     <div className="flex items-center justify-center mb-3">
                                         <CreditCard className="w-5 h-5 mr-2 text-white text-opacity-80" />
-                                        <span className="text-white text-opacity-90">ou em até 12x de:</span>
+                                        <span className="text-white text-opacity-90">
+                                            ou em até 12x de:
+                                        </span>
                                     </div>
-                                    <div className="text-2xl font-bold text-white mb-1">R$ 49,70</div>
+                                    <div className="text-2xl font-bold text-white mb-1">
+                                        R$ 49,70
+                                    </div>
                                     <div className="text-white text-opacity-70 text-sm line-through mb-1">
                                         (era 12x de R$ 99,70)
                                     </div>
-                                    <div className="text-white text-opacity-90 text-sm">sem juros no cartão</div>
+                                    <div className="text-white text-opacity-90 text-sm">
+                                        sem juros no cartão
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -640,7 +712,13 @@ function App() {
                                 <span>Suporte direto com a equipe</span>
                             </div>
                         </div>
-                        <button className="bg-white text-[#1D4ED8] px-12 py-5 rounded-full text-md lg:text-xl font-bold transform hover:scale-105 transition-all duration-300 shadow-2xl">
+                        <button
+                            onClick={() => {
+                                window.location.href =
+                                    "https://institutomargutti.com.br";
+                            }}
+                            className="bg-white text-[#1D4ED8] px-6 py-5 rounded-full text-sm lg:text-xl font-bold transform hover:scale-105 transition-all duration-300 shadow-2xl"
+                        >
                             QUERO TRANSFORMAR MINHA CARREIRA AGORA
                             <ArrowRight className="inline-block ml-3 w-6 h-6" />
                         </button>
