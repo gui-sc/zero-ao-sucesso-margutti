@@ -660,7 +660,7 @@ function App() {
                                         De:
                                     </div>
                                     <div className="text-white text-opacity-70 text-2xl line-through">
-                                        R$ 997,00
+                                        R$ 399,00
                                     </div>
                                 </div>
 
@@ -670,7 +670,7 @@ function App() {
                                         Por apenas:
                                     </div>
                                     <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                                        R$ 497
+                                        R$ 99,00
                                     </div>
                                     <div className="text-white text-opacity-90 text-lg">
                                         à vista
@@ -682,14 +682,14 @@ function App() {
                                     <div className="flex items-center justify-center mb-3">
                                         <CreditCard className="w-5 h-5 mr-2 text-white text-opacity-80" />
                                         <span className="text-white text-opacity-90">
-                                            ou em até 12x de:
+                                            ou em até 10x de:
                                         </span>
                                     </div>
-                                    <div className="text-2xl font-bold text-white mb-1">
-                                        R$ 49,70
-                                    </div>
                                     <div className="text-white text-opacity-70 text-sm line-through mb-1">
-                                        (era 12x de R$ 99,70)
+                                        R$ 39,90
+                                    </div>
+                                    <div className="text-2xl font-bold text-white mb-1">
+                                        R$ 9,90
                                     </div>
                                     <div className="text-white text-opacity-90 text-sm">
                                         sem juros no cartão
