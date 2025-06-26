@@ -72,6 +72,43 @@ function App() {
                 </div>
             </section>
 
+            {/* Video Section */}
+            <section className="py-20 bg-gray-50">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            Veja como transformar sua carreira odontológica
+                        </h2>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Assista ao vídeo e descubra os segredos para construir uma clínica de sucesso
+                        </p>
+                    </div>
+                    
+                    <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
+                        <div className="aspect-video">
+                            <iframe
+                                src="https://www.youtube.com/embed/KNm4FVPT-D4"
+                                title="Do Zero ao Sucesso - Clínica Odontológica"
+                                className="w-full h-full"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    </div>
+                    
+                    <div className="text-center mt-8">
+                        <button
+                            onClick={() => scrollToSection("investimento")}
+                            className="bg-[#1D4ED8] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                        >
+                            QUERO COMEÇAR AGORA
+                            <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                        </button>
+                    </div>
+                </div>
+            </section>
+
             {/* What You'll Learn Section */}
             <section className="relative py-20 bg-gradient-to-r from-blue-50 to-blue-100 overflow-hidden">
                 {/* Background Image */}
