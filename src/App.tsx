@@ -26,6 +26,19 @@ function App() {
             });
         }
     };
+
+    const handleDownload = () => {
+        // Lógica para download do material no google drive
+        const url = "https://drive.google.com/file/d/1ht48Hvn5iClYobDY2Mo1T9tfnlMyEcYu/view?usp=sharing";
+        const link = document.createElement("a");
+        link.href = url;
+        link.target = "_blank"; // Abre em nova aba
+        link.rel = "noopener noreferrer"; // Segurança adicional
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
@@ -541,8 +554,7 @@ function App() {
                                     <strong>
                                         14 anos de atuação clínica e acadêmica
                                     </strong>
-                                    , referência em Implantodontia e
-                                    Reabilitação Oral.
+                                    , referencia nacional em Prótese Dentária e Reabilitação oral.
                                 </p>
                                 <div className="grid md:grid-cols-2 gap-3 text-left">
                                     <div className="space-y-4">
@@ -596,27 +608,18 @@ function App() {
                                                 <CheckCircle className="w-5 h-5 text-[#1D4ED8] mr-3 mt-1 flex-shrink-0" />
                                                 <span className="text-gray-700">
                                                     <strong>
-                                                        Consultor Científico
+                                                        Pós Graduado em
+                                                        Implantodontia
                                                     </strong>{" "}
-                                                    - Signo Vinces
+                                                    - UNINGÁ
                                                 </span>
                                             </div>
                                             <div className="flex items-start">
                                                 <CheckCircle className="w-5 h-5 text-[#1D4ED8] mr-3 mt-1 flex-shrink-0" />
                                                 <span className="text-gray-700">
                                                     <strong>
-                                                        Consultor Científico
-                                                    </strong>{" "}
-                                                    - FGM
-                                                </span>
-                                            </div>
-                                            <div className="flex items-start">
-                                                <CheckCircle className="w-5 h-5 text-[#1D4ED8] mr-3 mt-1 flex-shrink-0" />
-                                                <span className="text-gray-700">
-                                                    <strong>
-                                                        Consultor Científico
-                                                    </strong>{" "}
-                                                    - Yller
+                                                        Consultor Científico e Speaker de empresas nacionais e internacionais
+                                                    </strong>
                                                 </span>
                                             </div>
                                         </div>
@@ -651,7 +654,7 @@ function App() {
                                 e comece hoje mesmo a transformação da sua
                                 carreira!
                             </p>
-                            <button className="bg-[#1D4ED8] text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg">
+                            <button onClick={handleDownload} className="bg-[#1D4ED8] text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg">
                                 <Download className="inline w-6 h-6 mr-3" />
                                 BAIXAR E-BOOK GRÁTIS
                             </button>
