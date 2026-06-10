@@ -29,7 +29,8 @@ function App() {
 
     const handleDownload = () => {
         // Lógica para download do material no google drive
-        const url = "https://drive.google.com/file/d/1ht48Hvn5iClYobDY2Mo1T9tfnlMyEcYu/view?usp=sharing";
+        const url =
+            "https://drive.google.com/file/d/1ht48Hvn5iClYobDY2Mo1T9tfnlMyEcYu/view?usp=sharing";
         const link = document.createElement("a");
         link.href = url;
         link.target = "_blank"; // Abre em nova aba
@@ -37,7 +38,7 @@ function App() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-    }
+    };
 
     return (
         <div className="min-h-screen bg-white">
@@ -47,8 +48,7 @@ function App() {
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
                     style={{
-                        backgroundImage:
-                            'url("./consultorio.webp")',
+                        backgroundImage: 'url("./consultorio.webp")',
                         filter: "blur(2px)",
                     }}
                 ></div>
@@ -93,10 +93,11 @@ function App() {
                             Veja como transformar sua carreira odontológica
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Assista ao vídeo e descubra os segredos para construir uma clínica de sucesso
+                            Assista ao vídeo e descubra os segredos para
+                            construir uma clínica de sucesso
                         </p>
                     </div>
-                    
+
                     <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
                         <div className="aspect-video">
                             <iframe
@@ -109,7 +110,7 @@ function App() {
                             ></iframe>
                         </div>
                     </div>
-                    
+
                     <div className="text-center mt-8">
                         <button
                             onClick={() => scrollToSection("investimento")}
@@ -554,7 +555,8 @@ function App() {
                                     <strong>
                                         14 anos de atuação clínica e acadêmica
                                     </strong>
-                                    , referencia nacional em Prótese Dentária e Reabilitação oral.
+                                    , referencia nacional em Prótese Dentária e
+                                    Reabilitação oral.
                                 </p>
                                 <div className="grid md:grid-cols-2 gap-3 text-left">
                                     <div className="space-y-4">
@@ -618,7 +620,10 @@ function App() {
                                                 <CheckCircle className="w-5 h-5 text-[#1D4ED8] mr-3 mt-1 flex-shrink-0" />
                                                 <span className="text-gray-700">
                                                     <strong>
-                                                        Consultor Científico e Speaker de empresas nacionais e internacionais
+                                                        Consultor Científico e
+                                                        Speaker de empresas
+                                                        nacionais e
+                                                        internacionais
                                                     </strong>
                                                 </span>
                                             </div>
@@ -654,7 +659,10 @@ function App() {
                                 e comece hoje mesmo a transformação da sua
                                 carreira!
                             </p>
-                            <button onClick={handleDownload} className="bg-[#1D4ED8] text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg">
+                            <button
+                                onClick={handleDownload}
+                                className="bg-[#1D4ED8] text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg"
+                            >
                                 <Download className="inline w-6 h-6 mr-3" />
                                 BAIXAR E-BOOK GRÁTIS
                             </button>
@@ -672,8 +680,7 @@ function App() {
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
                     style={{
-                        backgroundImage:
-                            'url("./consultorio.webp")',
+                        backgroundImage: 'url("./consultorio.webp")',
                         filter: "blur(2px)",
                     }}
                 ></div>
@@ -700,7 +707,7 @@ function App() {
                                         De:
                                     </div>
                                     <div className="text-white text-opacity-70 text-2xl line-through">
-                                        R$ 399,00
+                                        R$ 697,00
                                     </div>
                                 </div>
 
@@ -710,7 +717,7 @@ function App() {
                                         Por apenas:
                                     </div>
                                     <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                                        R$ 99,00
+                                        R$ 397,00
                                     </div>
                                     <div className="text-white text-opacity-90 text-lg">
                                         à vista
@@ -726,10 +733,10 @@ function App() {
                                         </span>
                                     </div>
                                     <div className="text-white text-opacity-70 text-sm line-through mb-1">
-                                        R$ 39,90
+                                        R$ 69,70
                                     </div>
                                     <div className="text-2xl font-bold text-white mb-1">
-                                        R$ 9,90
+                                        R$ 39,70
                                     </div>
                                     <div className="text-white text-opacity-90 text-sm">
                                         sem juros no cartão
