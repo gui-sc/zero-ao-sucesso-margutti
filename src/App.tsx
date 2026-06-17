@@ -762,7 +762,7 @@ function App() {
                         <button
                             onClick={() => {
                                 window.location.href =
-                                    "https://buy.stripe.com/7sYdR8fyL4RW07Q5aD93y00";
+                                    "https://buy.stripe.com/dRm9AS3Q31FK4o60Un93y01";
                             }}
                             className="bg-white text-[#1D4ED8] px-6 py-5 rounded-full text-sm lg:text-xl font-bold transform hover:scale-105 transition-all duration-300 shadow-2xl"
                         >
